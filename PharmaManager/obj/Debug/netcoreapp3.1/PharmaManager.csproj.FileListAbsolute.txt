@@ -1,0 +1,13 @@
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\bin\Debug\netcoreapp3.1\PharmaManager.exe
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\bin\Debug\netcoreapp3.1\PharmaManager.deps.json
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\bin\Debug\netcoreapp3.1\PharmaManager.runtimeconfig.json
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\bin\Debug\netcoreapp3.1\PharmaManager.runtimeconfig.dev.json
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\bin\Debug\netcoreapp3.1\PharmaManager.dll
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\bin\Debug\netcoreapp3.1\PharmaManager.pdb
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.csprojAssemblyReference.cache
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.AssemblyInfoInputs.cache
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.AssemblyInfo.cs
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.csproj.CoreCompileInputs.cache
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.dll
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.pdb
+C:\Users\Alexis\source\repos\PharmaManager\PharmaManager\obj\Debug\netcoreapp3.1\PharmaManager.genruntimeconfig.cache
