@@ -54,14 +54,29 @@ namespace PharmaManager.Pharmacies
                 {
                     ph.royalties = montantRoyalTies;
                     ph.ChiffreAffaireMois -= montantRoyalTies;
-
-                    Console.WriteLine($"La pharmacie {ph.Nom} doit payer {ph.royalties}euro à {Nom}");
+                    DisplayMontantDue(ph);
                 }
-
                 ChiffreAffaireMois += montantEarned;
-                Console.WriteLine($"{Nom} voit son chiffre d'affaire augmenter de {montantEarned}euro");
-
+                DisplayMontantGagner(montantEarned);
             }
+        }
+
+        /// <summary>
+        /// Affiche le montant due
+        /// </summary>
+        /// <param name="ph"></param>
+        private void DisplayMontantDue(PharmacieFranchise ph)
+        {
+            Console.WriteLine($"La pharmacie {ph.Nom} doit payer {ph.royalties}euro à {Nom}");
+        }
+
+        /// <summary>
+        /// Affiche le montant gagner
+        /// </summary>
+        /// <param name="montant"></param>
+        private void DisplayMontantGagner(double montant)
+        {
+            Console.WriteLine($"{Nom} voit son chiffre d'affaire augmenter de {montant}euro");
         }
 
         /// <summary>

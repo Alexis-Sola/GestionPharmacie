@@ -44,11 +44,16 @@ namespace PharmaManager.PaiementClient
         {
             if (AuthorizePayment(montant))
             {
-                Console.WriteLine($"Le montant a payer est : {newMontant}euro");
+                DisplayPayer(newMontant);
                 Solde -= montant;
                 return true;
             }
             return false;
+        }
+
+        private void DisplayPayer(double montant)
+        {
+            Console.WriteLine($"Le montant a payer est : {montant}euro");
         }
 
         /// <summary>

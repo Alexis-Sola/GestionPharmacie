@@ -19,5 +19,13 @@ namespace PharmaManager.Transactions
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Affichage des transactions
+        /// </summary>
+        /// <param name="id"></param>
+        protected abstract void DisplayAdd(int id);
+
+        protected abstract void DisplayAnnuler();
     }
 }

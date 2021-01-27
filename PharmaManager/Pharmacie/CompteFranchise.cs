@@ -50,7 +50,7 @@ namespace PharmaManager.Pharmacies
 
                 if (addStock)
                 {
-                    Console.WriteLine($"La phamacie {Ph.Nom} achete le produit {p.Nom} pour un montant de {newMontant}euro au lieu de {p.PrixAchat}euro");
+                    DisplayAchatAvecReduction(p, newMontant);
                     Ph.Stock.Add(p);
                 }
 
@@ -61,12 +61,31 @@ namespace PharmaManager.Pharmacies
                 {
                     Ph.Stock.Add(p);
                     new TransactionPharma(new TransactionValidee(), p.PrixAchat, DateTime.Now, DateTime.Now, true, "Fournisseur", Ph.Nom);
-                    Console.WriteLine($"La phamacie {Ph.Nom} achete le produit {p.Nom} pour un montant de {p.PrixAchat}euro");
+                    DisplayAchatSansReduction(p);
                 }
                 else
                     RefusedTransaction(p.PrixAchat);
             }
 
+        }
+
+        /// <summary>
+        /// Affiche les achat avec les reductions
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="newMontant"></param>
+        private void DisplayAchatAvecReduction(Produit p, double newMontant)
+        {
+            Console.WriteLine($"La phamacie {Ph.Nom} achete le produit {p.Nom} pour un montant de {newMontant}euro au lieu de {p.PrixAchat}euro");
+        }
+
+        /// <summary>
+        /// Affiche les achats sans les reductions
+        /// </summary>
+        /// <param name="p"></param>
+        private void DisplayAchatSansReduction(Produit p)
+        {
+            Console.WriteLine($"La phamacie {Ph.Nom} achete le produit {p.Nom} pour un montant de {p.PrixAchat}euro");
         }
 
         /// <summary>

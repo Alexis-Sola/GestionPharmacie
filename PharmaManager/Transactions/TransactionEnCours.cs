@@ -9,10 +9,20 @@ namespace PharmaManager.Transactions
         public override void Add(TransactionPharma t)
         {
             t.LivresTransactions.TransactionEnCours.Add(t);
-            Console.WriteLine($"La Transaction {t.Id} ajouté dans la liste des transactions en cours");
+            DisplayAdd(t.Id);
         }
 
         public override void Annuler(TransactionPharma t)
+        {
+            DisplayAnnuler();
+        }
+
+        protected override void DisplayAdd(int id)
+        {
+            Console.WriteLine($"La Transaction {id} ajouté dans la liste des transactions en cours");
+        }
+
+        protected override void DisplayAnnuler()
         {
             Console.WriteLine($"Annulation de la transaction...");
         }

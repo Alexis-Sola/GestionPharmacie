@@ -20,11 +20,20 @@ namespace PharmaManager.Pharmacies
             if (Debiter(p.PrixAchat))
             {
                 Ph.Stock.Add(p);
-                Console.WriteLine($"La phamacie {Ph.Nom} achete le produit {p.Nom} pour un montant de {p.PrixAchat}euro");
+                DisplayAchat(p);
                 new TransactionPharma(new TransactionValidee(), 10, DateTime.Now, DateTime.Now, true, "Fournisseur", Ph.Nom);
             }
             else
                 new TransactionPharma(new TransactionRefusee(), 10, DateTime.Now, DateTime.Now, true, "Fourniseur", Ph.Nom);
+        }
+
+        /// <summary>
+        /// Affiche l'achat d'un produit
+        /// </summary>
+        /// <param name="p"></param>
+        private void DisplayAchat(Produit p)
+        {
+            Console.WriteLine($"La phamacie {Ph.Nom} achete le produit {p.Nom} pour un montant de {p.PrixAchat}euro");
         }
     }
 }

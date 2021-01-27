@@ -55,7 +55,7 @@ namespace PharmaManager.Transactions
 
                 //On créer la transaction
                 new TransactionPharma(new TransactionValidee(), p.PrixVente, DateTime.Now, DateTime.Now, true, c.Ph.Nom, Nom);
-                Console.WriteLine($"Une vente vient d'être effectuée. Le compte de la pharmacie {c.Ph.Nom} est créditer de {p.PrixVente}euro");
+                DisplayVenteClassique(p, c);
             }
             else
                 new TransactionPharma(new TransactionRefusee(), p.PrixVente, DateTime.Now, DateTime.Now, true, c.Ph.Nom, Nom);
@@ -83,11 +83,22 @@ namespace PharmaManager.Transactions
 
                 //On créer la transaction et on set la date à la fin du mois 
                 new TransactionPharma(new TransactionEnCours(), p.PrixVente, DateTime.Now, new DateTime(2020, 12, 31, 23, 59, 59), false, c.Ph.Nom, Nom);
-                Console.WriteLine($"Une vente vient d'être effectuée. La transaction d'un montantvde {p.PrixVente} sera effectuée à la fin du mois.");
+                DisplayVenteRetardee(p);
             }
             else
                 new TransactionPharma(new TransactionRefusee(), p.PrixVente, DateTime.Now, DateTime.Now, true, c.Ph.Nom, Nom);
         }
+
+        private void DisplayVenteRetardee(Produit p )
+        {
+            Console.WriteLine($"Une vente vient d'être effectuée. La transaction d'un montant de {p.PrixVente} sera effectuée à la fin du mois.");
+        }
+
+        private void DisplayVenteClassique(Produit p, Compte c)
+        {
+            Console.WriteLine($"Une vente vient d'être effectuée. Le compte de la pharmacie {c.Ph.Nom} est créditer de {p.PrixVente}euro");
+        }
+
 
         /// <summary>
         /// Remboursement du client quand il conteste son achat

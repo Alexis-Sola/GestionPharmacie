@@ -9,10 +9,20 @@ namespace PharmaManager.Transactions
         public override void Add(TransactionPharma t)
         {
             t.LivresTransactions.TransactionValidee.Add(t);
-            Console.WriteLine($"La Transaction {t.Id} a été ajouté dans la liste des transaction validée.");
+            DisplayAdd(t.Id);
         }
 
         public override void Annuler(TransactionPharma t)
+        {
+            DisplayAnnuler();
+        }
+
+        protected override void DisplayAdd(int id)
+        {
+            Console.WriteLine($"La Transaction {id} a été ajouté dans la liste des transaction validée.");
+        }
+
+        protected override void DisplayAnnuler()
         {
             Console.WriteLine($"Impossible d'annuler une transaction deja validee");
         }

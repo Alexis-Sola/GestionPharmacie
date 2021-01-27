@@ -10,10 +10,21 @@ namespace PharmaManager.Transactions
         {
             t.DebitEffectue = false;
             t.LivresTransactions.TransactionRefusee.Add(t);
-            Console.WriteLine($"La Transaction {t.Id} a été ajouté dans la liste des transactions refusees");
+            DisplayAdd(t.Id);
         }
 
         public override void Annuler(TransactionPharma t)
+        {
+            DisplayAnnuler();
+        }
+
+
+        protected override void DisplayAdd(int id)
+        {
+            Console.WriteLine($"La Transaction {id} a été ajouté dans la liste des transactions refusees");
+        }
+
+        protected override void DisplayAnnuler()
         {
             Console.WriteLine($"Impossible d'annuler une transaction deja refusee");
         }
